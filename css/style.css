@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans');
+body {
+   background-image: url(../images/background.jpg);
+   font-family: 'Merriweather Sans', sans-serif;
+}
+
+section {
+   margin-bottom: 40px;
+}
+
+section .btn {
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+section h2 {
+   text-transform: uppercase;
+   text-align: center;
+}
+
+h2 {
+   margin-bottom: 40px;
+}
+
+h2,
+h3,
+h4 {
+   font-family: 'Merriweather', serif;
+   font-weight: bold;
+}
+
+h3 {
+   font-size: 1.3em;
+}
+
+img {
+   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   .container {
+      max-width: 100%;
+      padding: 0;
+   }
+}
+
+header {
+   background-image: url(../images/backsurf.png);
+   height: 1296px;
+}
+
+header nav{
+   z-index:1;
+}
+
+.link{
+   color: #000000 !important;
+   text-transform: uppercase !important;
+   font-weight: normal !important;
+   text-shadow: none !important;
+}
+
+.navbar-dark  {
+   background-color: rgba(52, 52, 52, 0.3);
+   color: #f6c311;
+   text-transform: uppercase;
+   font-weight: bold;
+   text-shadow: 0 1px 1px #000;
+}
+.navbar-light a, .navbar-brand a {
+      color: #f6c311;
+}
+.nav-item a {
+   color: #f6c311!important;
+   
+}
+
+.navbar-brand img {
+   margin: 0;
+   margin-right: 20px;
+   padding: 0;
+   width: 50px;
+}
+.navbar-brand {
+   margin: 0;
+   padding: 0;
+}
+.navbar form {
+   margin-right: 10px;
+}
+
+.btn,
+.btn-lg {
+   background-color: #f6c311;
+   border: none;
+}
+
+.btn-aban{
+   text-transform: uppercase;
+   background-color: #f62011;
+   border: none;
+}
+
+.bloc {
+   border-top: 20px solid black;
+   border-bottom: 10px solid black;
+   background-color: #fff;
+   padding: 40px 20px;
+   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
+   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navbar-dark a {
+   color: #f6c311;
+   text-transform: uppercase;
+   font-weight: bold;
+   text-shadow: 0 1px 1px #000;
+}
+
+#logo {
+   float: left;
+}
+
+#barre-nav {
+   padding-top: 30px;
+}
+
+#panier {
+   margin-left: 15px;
+}
+
+.nav {
+   font-size: 1.1em;
+}
+
+
+/* BANNIERES PUB */
+
+.pub {
+   margin-top: -1160px;
+}
+
+.pub img {
+   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
+   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 992px) {
+   header {
+      background-image: none;
+      height: auto;
+   }
+   .pub {
+      margin-top: 10px;
+   }
+}
+
+/* -------------------------------- */
+
+/* ESPACE MEMBRE Css V2 */
+
+#LoginContainer{
+   display: none;
+}
+
+#Login{
+   border-color: #71d0c2;
+}
+
+/* Display de connextion */
+#displayLogin{
+   display: block;
+}
+#ErrorLogin{
+   display: none;
+}
+
+/* Display de inscription */
+#displayRegister{
+   display: none;
+}
+#ErrorRegister{
+   display: none;
+}
+
+/* Display mot de passe oublié */
+#displayForgotPass{
+   display: none;
+}
+#ErrorForgotPass{
+   display: none;
+}
+
+/* display envoy de mail INSCRIPTION*/
+#displaySendEmail{
+   display: none;
+}
+
+/* display envoy de mail nouveau mot de passe*/
+#displaySendForgotPass {
+   display: none;
+}
+
+/* -------------------------------- */
+
+/* BOUTIQUE */
+
+.boutique {
+   border-color: #f6c311;
+   text-align: center;
+   background-color: #fff;
+   padding: 40px 20px;
+}
+
+.boutique .produit {
+   margin-bottom: 20px;
+}
+
+.boutique img {
+   width: 80%;
+   margin-bottom: 10px;
+}
+
+.boutique .description_produit {
+   margin: 20px 0;
+   text-align: left;
+}
+
+.boutique .prix {
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+.boutique .btn {
+   background-color: #f6c311;
+}
+
+
+/* COURS DE SURF */
+
+#coursdesurf {
+   border-color: #42c1f0;
+}
+
+#coursdesurf .card {
+   text-align: center;
+   border-radius: 10px;
+   margin-top: 30px;
+}
+
+#coursdesurf .card-title {
+   background-color: #42c1f0;
+   padding: 25px;
+   border-radius: 10px;
+}
+
+#coursdesurf h3 {
+   text-align: center;
+   margin-top: 30px;
+}
+
+#coursdesurf h4 {
+   text-transform: uppercase;
+}
+
+
+/* LOCATION DE MATERIEL */
+
+.location {
+   border-color: #8560a8;
+}
+
+.bloc-info {
+   margin-bottom: 30px;
+}
+
+.location table {
+   background-color: #ebebeb;
+   text-align: center;
+}
+
+.location th {
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.location th,
+.location td {
+   border-color: #8560a8;
+   border-width: 2px;
+}
+
+.location th {
+   background-color: #8560a8;
+   color: #fff;
+}
+
+.location tbody {
+   padding: 50px;
+}
+
+
+/* NOS PARTENAIRES */
+
+.partenaires {
+   border-color: #dd3f56;
+}
+
+.bloc-partner {
+   margin-bottom: 40px;
+}
+
+.partenaires button {
+   margin-bottom: 15px;
+}
+
+.carousel {
+   margin-bottom: 20px;
+}
+
+/* HISTOIRE */
+
+#histoire {
+   border-color: #71d0c2;
+}
+
+#equipe {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+#equipe p {
+   margin: 0;
+   padding: 0;
+}
+
+#equipe img {
+   width: 230px;
+   border: 15px solid #71d0c2;
+   margin-top: 30px;
+   margin-bottom: 10px;
+}
+
+#equipe .role {
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+
+/* COORDONNEES */
+
+#coordonnes {
+   border-color: #f6c311;
+}
+
+
+/* FOOTER */
+
+footer {
+   background-image: url(../images/back-footer.png);
+   width: 100%;
+   padding-top: 670px;
+   text-transform: uppercase;
+   color: #fff;
+   text-shadow: 0px 1px 1px #000;
+   position: absolute;
+   z-index: -1;
+   margin-top: -600px;
+   font-size: 1.1em;
+}
+
+footer li {
+   list-style-type: none;
+}
+
+footer a {
+   color: #fff;
+}
+
+.test {
+   border: 1px solid #000;
+}
+
+#barre-menu {
+   border: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+   p {
+      font-size: 1.2em;
+   }
+   footer {
+      padding-top: 670px;
+      margin-top: -670px;
+   }
+   footer .container {
+      padding: 0 15px;
+   }
+}
+
+#soutien {
+   background-color: #fff;
+   text-align: center;
+   padding: 10px 0;
+}
+
+#soutien img {
+   margin-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+   #soutien img {
+      height: 50px;
+      text-align: center;
+   }
+}

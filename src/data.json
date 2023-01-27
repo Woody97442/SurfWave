@@ -1,0 +1,193 @@
+{
+    "users":[
+        {
+            "id": 0,
+            "role": 1,
+            "email": "admin@admin",
+            "nom": "admin",
+            "prenom": "admin",
+            "phoneNumber": "1111111111",
+            "Professional_category":"",
+            "password": "Admin1@"
+        },
+        {
+            "id": 1,
+            "role": 0,
+            "email": "client@client",
+            "nom": "client",
+            "prenom": "client",
+            "phoneNumber": "2222222222",
+            "Professional_category":"",
+            "password": "Client1@"
+        },
+        {
+            "id": 2,
+            "role": 0,
+            "email": "client2@client",
+            "nom": "client2",
+            "prenom": "client2",
+            "phoneNumber": "3333333333",
+            "Professional_category":"",
+            "password": "Client2@"
+        }
+    ],
+
+    "registrations": [
+        {
+            "email": "johndoe@example.com",
+            "lastName": "Doe",
+            "firstName": "John",
+            "phoneNumber": "0692748596",
+            "Professional_category":"",
+            "password": "mysecretpassword"
+        },
+        {
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "email": "janedoe@example.com",
+            "phoneNumber": "0692845236",
+            "Professional_category":"",
+            "password": "mysecretpassword2"
+        }
+    ],
+
+    "usersForgotPass": [
+        {
+            "email": "johndoe@example.com",
+            "phoneNumber": "0692748596",
+            "newPassword": "test"
+        },
+        {
+            "email": "janedoe@example.com",
+            "phoneNumber": "0692845236",
+            "newPassword": "mysecretpassword2"
+        },
+        {
+            "email": "client@client",
+            "phoneNumber": "2222222222",
+            "newPassword": "mysecretpassword2"
+        }
+        
+    ],
+
+    "Professional_category_list":[
+        {
+            "codCP": "10",
+            "libCP": "AGRICULTEURS (salariés de leur exploitation)"
+        },
+        {
+            "codCP": "21",
+            "libCP": "ARTISANS (salariés de leur entreprise)"
+        },
+        {
+            "codCP": "22",
+            "libCP": "COMMERCANTS ET ASSIMILES (salariés de leur entreprise)"
+        },
+        {
+            "codCP": "23",
+            "libCP": "CHEFS D'ENTREPRISE DE 10 SALARIES OU PLUS (salariés de leur entreprise)"
+        },
+        {
+            "codCP": "31",
+            "libCP": "PROFESSIONS LIBERALES (exercées sous statut de salarié)"
+        },
+        {
+            "codCP": "33",
+            "libCP": "CADRES DE LA FONCTION PUBLIQUE"
+        },
+        {
+            "codCP": "34",
+            "libCP": "PROFESSEURS, PROFESSIONS SCIENTIFIQUES"
+        },
+        {
+            "codCP": "35",
+            "libCP": "PROFESSIONS DE L'INFORMATION, DES ARTS ET DES SPECTACLES"
+        },
+        {
+            "codCP": "37",
+            "libCP": "CADRES ADMINISTRATIFS ET COMMERCIAUX D'ENTREPRISES"
+        },
+        {
+            "codCP": "38",
+            "libCP": "INGENIEURS ET CADRES TECHNIQUES D'ENTREPRISES"
+        },
+        {
+            "codCP": "42",
+            "libCP": "PROFESSEURS DES ECOLES, INSTITUTEURS ET PROFESSIONS ASSIMILEES"
+        },
+        {
+            "codCP": "43",
+            "libCP": "PROFESSIONS INTERMEDIAIRES DE LA SANTE ET DU TRAVAIL SOCIAL"
+        },
+        {
+            "codCP": "44",
+            "libCP": "CLERGE, RELIGIEUX"
+        },
+        {
+            "codCP": "45",
+            "libCP": "PROFESSIONS INTERMEDIAIRES ADMINISTRATIVES E LA FONCTION PUBLIQUE"
+        },
+        {
+            "codCP": "46",
+            "libCP": "PROFESSIONS INTERMEDIAIRES ADMINISTRATIVES ET COMMERCIALES DES ENTREPRISES"
+        },
+        {
+            "codCP": "47",
+            "libCP": "TECHNICIENS (sauf techniciens tertiaires)"
+        },
+        {
+            "codCP": "48",
+            "libCP": "CONTREMAITRES, AGENTS DE MAITRISE (maîtrise administrative exclue)"
+        },
+        {
+            "codCP": "52",
+            "libCP": "EMPLOYES CIVILS ET AGENTS DE SERVICE DE LA FONCTION PUBLIQUE"
+        },
+        {
+            "codCP": "53",
+            "libCP": "AGENTS DE SURVEILLANCE "
+        },
+        {
+            "codCP": "54",
+            "libCP": "EMPLOYES ADMINISTRATIFS D'ENTREPRISE"
+        },
+        {
+            "codCP": "55",
+            "libCP": "EMPLOYES DE COMMERCE"
+        },
+        {
+            "codCP": "56",
+            "libCP": "PERSONNELS DES SERVICES DIRECTS AUX PARTICULIERS"
+        },
+        {
+            "codCP": "62",
+            "libCP": "OUVRIERS QUALIFIES DE YPE INDUSTRIEL"
+        },
+        {
+            "codCP": "63",
+            "libCP": "OUVRIERS QUALIFIES DE TYPE ARTISANAL"
+        },
+        {
+            "codCP": "64",
+            "libCP": "CHAUFFEURS"
+        },
+        {
+            "codCP": "65",
+            "libCP": "OUVRIERS QUALIFIES DE LA MANUTENTION, DU MAGASINAGE ET DU TRANSPORT"
+        },
+        {
+            "codCP": "67",
+            "libCP": "OUVRIERS NON QUALIFIES DE TYPE INDUSTRIEL"
+        },
+        {
+            "codCP": "68",
+            "libCP": "OUVRIERS NON QUALIFIES DE TYPE ARTISANAL"
+        },
+        {
+            "codCP": "69",
+            "libCP": "OUVRIERS AGRICOLES ET ASSIMILES"
+        }
+
+    ]
+
+}

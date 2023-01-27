@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <title>Surf Wave</title>
+   <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <!-- HEADER -->
+
+   <header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+           </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Boutique</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Location</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Cours de surf</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">L'histoire</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Contact</a>
+                  </li>
+               </ul>
+               <form class="form-inline my-2 my-md-0">
+                  <input class="form-control" type="text" placeholder="Recherche" aria-label="Search">
+               </form>
+               <button type="button" id="btnNavLogin" class="btn">Connexion</button>
+            </div>
+         </div>
+      </nav>
+
+   </header>
+
+   <!-- BANNIERES PUB -->
+
+   <section class="pub">
+      <div class="container" id="displayPub">
+         <div class="row">
+            <div class="col-lg-4 d-none d-sm-none d-md-none d-xl-block">
+               <a href="#"><img class="img-fluid" src="images/pub-festival.jpg" alt="Festival Manapany 2017"></a>
+            </div>
+            <div class="col-lg-4 d-none d-sm-none d-md-none d-xl-block">
+               <a href="#"><img class="img-fluid" src="images/pub-goodies.jpg" alt="Goodies"></a>
+            </div>
+            <div class="col-lg-4 d-none d-sm-none d-md-none d-xl-block">
+               <a href="#"><img class="img-fluid" src="images/pub-nouveautes.jpg" alt="Nouveautés"></a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- NOUVEL DIV CONNEXION DE LA V2 -->
+
+   <section id="LoginContainer">
+      <div class="container ">
+         <div class="bloc" id="Login">
+
+            <div class="row justify-content-md-center">
+               
+               <!--ECRAN E1 connexion-->
+               <div class="col-lg-8 text-start " id="displayLogin">
+                  <div>
+                     <h3 class="text-center">ACCES A L'ESPACE MEMBRE</h3>
+                     <hr class="mt-1">
+                  </div>
+                  <form id="formLogin">
+                     <div class="form-group col-md-6 ps-0">
+                        <label for="coInputEmail">e-mail</label>
+                        <input type="email" class="form-control" id="coInputEmail" autocomplete="username" required>
+                     </div>
+                     <div class="form-group col-md-6 ps-0">
+                        <label for="coInputMdp">mot de passe</label>
+                        <input type="password" class="form-control" id="coInputMdp" autocomplete="current-password" required>
+                     </div>
+                     <div class="form-group alert alert-danger" id="ErrorLogin">
+                        <p class="m-0">Email invalide ou mot de passe invalide</p>
+                     </div>
+                     <div class="form-group col-md-4 ps-0">
+                        <button type="submit" class="btn">SE CONNECTER</button>
+                     </div>
+                  </form>
+                  <div >
+                     <button type="button" id="btnGoForgotPass" class="link-secondary bg-transparent p-0 border-0">Mot de passe oublié</button>
+                     <hr class="mt-1">
+                     <div>
+                        <p class="mb-1">Nouvel utilisateur ?</p>
+                        <div class="d-flex justify-content-between">
+                           <button type="button" class="btn" id="btnGoRegister">S'INSCRIRE</button>
+                           <button id="btnAbortLogin" type="button" class="btn btn-aban">ABANDON</button>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+               
+               <!--ECRAN E2 inscription-->
+               <div class="col-lg-8 text-start" id="displayRegister">
+                  <h3 class="text-center">DEMANDE D'INSCRIPTION</h3>
+                  <hr class="mt-1">
+                  <form id="formRegister">
+                     <div class="row mb-3">
+                        <label for="inputEmailReg" class="col-sm-4 col-form-label">Email</label>
+                        <div class="col-sm-8">
+                          <input type="email" class="form-control" id="inputEmailReg" autocomplete="username" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputNom" class="col-sm-4 col-form-label">nom</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputNom" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputPrenom" class="col-sm-4 col-form-label">prénom</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputPrenom" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputTel" class="col-sm-4 col-form-label">
+                           téléphone 
+                           <button type="button" class="btn ms-2 rounded-circle p-0" style="width: 30px; height: 30px;" data-bs-toggle="modal" data-bs-target="#telModal">?</button>
+                        </label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="inputTelReg" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputCatPro" class="col-sm-4 col-form-label">Catégorie professionnelle</label>
+                        <div class="col-sm-8">
+                           <select class="form-select" required id="selectCatList">
+                           </select>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputRegpassword" class="col-sm-4 col-form-label">
+                           mot de passe
+                           <button type="button" class="btn ms-2 rounded-circle p-0" style="width: 30px; height: 30px;" data-bs-toggle="modal" data-bs-target="#mdpModal">?</button>
+                        </label>
+                        <div class="col-sm-8">
+                          <input type="password" class="form-control" id="inputRegpassword" autocomplete="current-password" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputRegpasswordRes" class="col-sm-4 col-form-label">resaisir mdp</label>
+                        <div class="col-sm-8">
+                          <input type="password" class="form-control" id="inputRegpasswordRes" autocomplete="current-password" required>
+                        </div>
+                     </div>
+                     <div class="form-group alert alert-danger" id="ErrorRegister">
+                        <p class="m-0">Email invalide ou mot de passe invalide</p>
+                     </div>
+                     <br>
+                     <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn">VALIDER</button>
+                        <button id="btnAbortReg" type="button" class="btn btn-aban">ABANDON</button>
+                     </div>
+                  </form>
+               </div>
+
+               <!--ECRAN E3 oublie mot de passe-->
+               <div class="col-lg-8 text-start" id="displayForgotPass">
+                  <h3 class="text-center">MOT DE PASSE OUBLIÉ</h3>
+                  <hr class="mt-1">
+                  <form id="formForgotPass">
+                     <div class="row mb-3">
+                        <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
+                        <div class="col-sm-8">
+                          <input type="email" class="form-control" id="inputUserEmail" autocomplete="username" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputTel" class="col-sm-4 col-form-label">téléphone</label>
+                        <div class="col-sm-8">
+                          <input type="number" class="form-control" id="inputUserTel" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputMdp" class="col-sm-4 col-form-label">
+                           nv mdpasse
+                           <button type="button" class="btn ms-2 rounded-circle p-0" style="width: 30px; height: 30px;" data-bs-toggle="modal"
+                              data-bs-target="#mdpModal">?</button>
+                        </label>
+                        <div class="col-sm-8">
+                          <input type="password" class="form-control" id="inputNvMdp" autocomplete="current-password" required>
+                        </div>
+                     </div>
+                     <div class="row mb-3">
+                        <label for="inputResMdp" class="col-sm-4 col-form-label">resaisir mdp</label>
+                        <div class="col-sm-8">
+                          <input type="password" class="form-control" id="inputResNvMdp" autocomplete="current-password" required>
+                        </div>
+                     </div>
+                     <div class="form-group alert alert-danger" id="ErrorForgotPass">
+                        <p class="m-0">Email invalide ou mot de passe invalide</p>
+                     </div>
+                     <br>
+                     <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn">VALIDER</button>
+                        <button id="btnAbortForgotPass" type="button" class="btn btn-aban">ABANDON</button>
+                     </div>
+                  </form>
+               </div>
+
+               <!--ECRAN E4 Email envoyer INSCRIPTION-->
+               <div class="col-lg-8 text-start" id="displaySendEmail">
+                  <h3 class="text-center">DEMANDE D'INSCRIPTION ENVOYER</h3>
+                  <hr class="mt-1">
+                  <div class="d-flex flex-column justify-content-center">
+                     <p> un e-mail avec un lien de validation vous a étè envoyer merci de confirmé votre inscription</p>
+                     <div>
+                        <button id="btnOkSendEmail" type="button" class="btn">Ok</button>
+                     </div>
+                  </div>
+               </div>
+
+               <!--ECRAN E5 Email envoyer  nouveau mot de passe-->
+               <div class="col-lg-8 text-start" id="displaySendForgotPass">
+                  <h3 class="text-center">DEMANDE DE NOUVEAU MOT DE PASSE ENVOYER</h3>
+                  <hr class="mt-1">
+                  <div class="d-flex flex-column justify-content-center">
+                     <p> un e-mail de confirmation vous a étè envoyer</p>
+                     <div>
+                        <button id="btnOkForgotPass" type="button" class="btn">Ok</button>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- lES MODAL D'AIDE -->
+   <!-- modal 1 tel-->
+   <div class="modal fade" id="telModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="modalLabel">AIDE</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <p>Le numéro de téléphone doit contenire <strong>10 chiffre minimun</strong></p>
+               <p>ce numéro est utiliser si vous avez oublié votre mot de passe</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- modal 2 mdp-->
+   <div class="modal fade" id="mdpModal" tabindex="-1" aria-labelledby="mdpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="mdpModalLabel">AIDE</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <p>Le mot de passe doit contenire:</p>
+               <ul class="list-unstyled">
+                  <li>8 caractères minimum</li>
+                  <li>une lettre minuscule</li>
+                  <li>une lettre majuscule</li>
+                  <li>un chiffre</li>
+                  <li>un caractère spécial (!, @, #...)</li>
+               </ul>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- BOUTIQUE -->
+
+   <section>
+      <div class="container">
+         <div class="bloc boutique">
+            <h2>Surf Wave vous recommande</h2>
+            <div class="row">
+               <div class="produit col-lg-4 col-md-12">
+                  <img src="images/planchedesurf.jpg" alt="Planche de surf" class="img-fluid">
+                  <div class="nom_produit">Demibu</div>
+                  <div class="description_produit d-sm-block d-lg-none">L’idée de la Demibu de Phil Grace est venue lorsque Phil a du couper la moitié de son malibu. Toutes ces planches sont souvent difficiles à porter jusqu’à la plage et même si vous avez des barres de toit, ce n’est pas facile à transporter; sans parler des charges des compagnies aériennes ! Donc il a coupé un malibu à moitié et maintenant vous pouvez profiter de la sensation du noseriding sur un 6’6. </div>
+                  <div class="prix">659,00 €</div>
+               </div>
+               <div class="produit col-lg-4 col-md-6 d-none d-sm-none d-lg-block">
+                  <img src="images/sacados.jpg" alt="Sac à dos" class="img-fluid">
+                  <div class="nom_produit">Origami<br /> Sac à dos de surf étache</div>
+                  <div class="prix">105,99 €</div>
+               </div>
+               <div class="produit col-lg-4 col-md-6 d-none d-sm-none d-lg-block">
+                  <img src="images/combinaison.jpg" alt="Combinaison de surf" class="img-fluid">
+                  <div class="nom_produit">Syncro 4/3mm - Combinaison de surf intégrale zip poitrine</div>
+                  <div class="prix">159,00 €</div>
+               </div>
+               <div class="produit col-lg-4 col-md-6 d-none d-sm-none d-lg-block">
+                  <img src="images/shortdesurf.jpg" alt="Short de surf" class="img-fluid">
+                  <div class="nom_produit">Samoa 19</div>
+                  <div class="prix">65,00 €</div>
+               </div>
+               <div class="produit col-lg-4 col-md-6 d-none d-sm-none d-lg-block">
+                  <img src="images/bodyboard.jpg" alt="Bodyboard" class="img-fluid">
+                  <div class="nom_produit">Bodyboard Flood<br /> Dynamx 40" White Lime + Leash</div>
+                  <div class="prix">65,00 €</div>
+               </div>
+               <div class="produit col-lg-4 col-md-6 d-none d-sm-none d-lg-block">
+                  <img src="images/lycra.jpg" alt="Lycra à manches longues" class="img-fluid">
+                  <div class="nom_produit">Active<br /> Lycra à manches longues</div>
+                  <div class="prix">39,50 €</div>
+               </div>
+            </div>
+
+            <button type="button" class="btn btn-lg">Visiter notre boutique</button>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- COURS DE SURF -->
+
+   <section>
+      <div class="container">
+         <div class="bloc" id="coursdesurf">
+            <h2>Cours de surf</h2>
+            <div class="row">
+               <div class="col-lg-6">
+                  <img src="images/coursdesurf.jpg" alt="Cours de surf" class="img-fluid"></div>
+               <div class="col-lg-6">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur optio perspiciatis, aperiam eligendi sapiente quo in neque magnam earum quaerat, dolorem aspernatur maiores iusto laboriosam blanditiis fugiat vero obcaecati ab eum! Voluptates optio consequuntur earum mollitia corrupti totam quibusdam quod laboriosam quo soluta dolorum inventore, quas tenetur, ad magnam dolore.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus reiciendis architecto quia, quis repellat vero labore natus doloremque neque consequuntur!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, natus.</p>
+               </div>
+            </div>
+
+            <h3>Découvrez nos différentes formules :</h3>
+
+            <div class="row justify-content-md-center">
+               <div class="col-lg-10">
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">Enfants</h4>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ipsa natus, fugit nulla illum iure?</p>
+                              <p class="prix">à partir de 30 €</p>
+                              <button type="button" class="btn btn-lg">Réserver</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">Ados</h4>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error officia perspiciatis voluptas porro in. Soluta.</p>
+                              <p class="prix">à partir de 50 €</p>
+                              <button type="button" class="btn btn-lg">Réserver</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">Adultes</h4>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus qui ea, neque quasi suscipit consectetur.</p>
+                              <p class="prix">à partir de 90 €</p>
+                              <button type="button" class="btn btn-lg">Réserver</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">Familles</h4>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eaque, consectetur alias libero laudantium illum.</p>
+                              <p class="prix">à partir de 50 €</p>
+                              <button class="btn btn-lg">Réserver</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">Week-End</h4>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis omnis placeat, quis consequuntur.</p>
+                              <p class="prix">à partir de 50 €</p>
+                              <button class="btn btn-lg">Réserver</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">Vacances</h4>
+                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sint, architecto, numquam unde similique.</p>
+                              <p class="prix">à partir de 50 €</p>
+                              <button class="btn btn-lg">Réserver</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- LOCATION DE MATERIEL -->
+
+   <section class="d-none d-md-none d-xl-block">
+      <div class="container">
+         <div class="bloc location">
+            <h2>Location de materiel</h2>
+            <div class="bloc-info row">
+               <div class="col-lg-6">
+                  <img src="images/planchesdesurf.jpg" alt="Planches de surf" class="img-fluid">
+               </div>
+               <div class="col-lg-6">
+                  <p>Nous proposons du matériel de location de qualité, avec un grand choix de planches de surf et de bodyboard ainsi que des combinaisons.<br /><br /> Tarifs : à partir de 7 €</p>
+               </div>
+            </div>
+            <h2>Tarifs</h2>
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th>Tarifs location</th>
+                     <th>Planche de surf</th>
+                     <th>Bodyboard</th>
+                     <th>Combinaison</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>1 heure</td>
+                     <td>10 €</td>
+                     <td>7 €</td>
+                     <td>7 €</td>
+                  </tr>
+                  <tr>
+                     <td>2 heures</td>
+                     <td>15 €</td>
+                     <td>10 €</td>
+                     <td>10 €</td>
+                  </tr>
+                  <tr>
+                     <td>3 heures</td>
+                     <td>20 €</td>
+                     <td>15 €</td>
+                     <td>15 €</td>
+                  </tr>
+                  <tr>
+                     <td>4 heures</td>
+                     <td>25 €</td>
+                     <td>20 €</td>
+                     <td>20 €</td>
+                  </tr>
+                  <tr>
+                     <td>1 jour</td>
+                     <td>35 €</td>
+                     <td>25 €</td>
+                     <td>25 €</td>
+                  </tr>
+                  <tr>
+                     <td>2 jours</td>
+                     <td>45 €</td>
+                     <td>35 €</td>
+                     <td>35 €</td>
+                  </tr>
+                  <tr>
+                     <td>3 jours</td>
+                     <td>55 €</td>
+                     <td>45 €</td>
+                     <td>45 €</td>
+                  </tr>
+                  <tr>
+                     <td>4 jours</td>
+                     <td>65 €</td>
+                     <td>55 €</td>
+                     <td>55 €</td>
+                  </tr>
+                  <tr>
+                     <td>5 jours</td>
+                     <td>75 €</td>
+                     <td>65 €</td>
+                     <td>65 €</td>
+                  </tr>
+                  <tr>
+                     <td>6 jours</td>
+                     <td>85 €</td>
+                     <td>75 €</td>
+                     <td>75 €</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </section>
+
+   <!-- NOS PARTENAIRES -->
+
+   <section>
+      <div class="container">
+         <div class="bloc partenaires">
+
+            <!-- SLIDERS -->
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img class="d-block w-100" src="images/slider_1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                     <img class="d-block w-100" src="images/slider_2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                     <img class="d-block w-100" src="images/slider_3.jpg" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                     <img class="d-block w-100" src="images/slider_4.jpg" alt="Third slide">
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            </div>
+
+            <h2>Nos partenaires</h2>
+            <div class="row bloc-partner">
+               <div class="col-lg-6"><img src="images/hebergements.jpg" alt="Hébergements" class="img-fluid"></div>
+               <div class="col-lg-6">
+                  <h3>Hébergements</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos temporibus quis accusantium repellat similique id velit vero? Velit placeat aperiam saepe consequatur aliquam fugiat labore alias numquam neque veritatis fugit quas quisquam dolorem?</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, adipisci repudiandae inventore numquam reprehenderit omnis explicabo eos in hic.</p>
+                  <button type="button" class="btn btn-lg">En savoir plus</button>
+               </div>
+            </div>
+            <div class="row bloc-partner">
+               <div class="col-lg-6 d-block d-lg-none"><img src="images/restauration.jpg" alt="Restauration" class="img-fluid"></div>
+               <div class="col-lg-6">
+                  <h3>Restauration</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos temporibus quis accusantium repellat similique id velit vero? Velit placeat</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, adipisci repudiandae inventore numquam reprehenderit omnis explicabo eos in hic.</p>
+                  <button type="button" class="btn btn-lg">En savoir plus</button>
+               </div>
+               <div class="col-lg-6 d-none d-lg-block"><img src="images/restauration.jpg" alt="Restauration" class="img-fluid"></div>
+            </div>
+            <div class="row bloc-partner">
+               <div class="col-lg-6"><img src="images/activites.jpg" alt="Activites" class="img-fluid"></div>
+               <div class="col-lg-6">
+                  <h3>Activités à proximité</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores sed ea aspernatur, quos voluptas optio, inventore voluptatibus deleniti perspiciatis a, nam recusandae! Soluta, quod corporis fugit!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, vitae. Esse vero nulla, earum dolorem voluptatibus incidunt distinctio animi, reiciendis?</p>
+                  <button type="button" class="btn btn-lg ">En savoir plus</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- HISTOIRE / NOTRE EQUIPE -->
+
+   <section>
+      <div class="container">
+         <div class="bloc" id="histoire">
+            <div class="row">
+               <div class="col-lg-4"><img src="images/logo.jpg" alt="Logo Surf Wave" class="img-fluid mx-auto d-block" width="300px"></div>
+               <div class="bloc-info col-lg-8">
+                  <h2>Histoire</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident eius quo, aut inventore quos ad a possimus corrupti aliquid soluta.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima numquam dolorum nesciunt, praesentium natus, suscipit minus totam, similique obcaecati debitis accusantium quo, animi unde! Ducimus placeat animi, adipisci assumenda! Possimus.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima numquam dolorum nesciunt, praesentium natus, suscipit minus totam, similique obcaecati debitis.</p>
+               </div>
+            </div>
+
+            <div id="equipe">
+               <h2>Notre équipe</h2>
+
+               <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/gourou.jpg" alt="Gourou" class="rounded-circle img-fluid">
+                     <p class="nom">Gourou</p>
+                     <p class="role">Directeur</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/dantel.jpg" alt="Dantel" class="rounded-circle img-fluid">
+                     <p class="nom">Dantel</p>
+                     <p class="role">Commercial</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/didi.jpg" alt="" class="rounded-circle img-fluid">
+                     <p class="nom">Didi</p>
+                     <p class="role">Commercial</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/patou.jpg" alt="Patou" class="rounded-circle">
+                     <p class="nom">Patou</p>
+                     <p class="role">Moniteur</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/fredo.jpg" alt="Fredo" class="rounded-circle">
+                     <p class="nom">Fredo</p>
+                     <p class="role">Moniteur</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/will.jpg" alt="Will" class="rounded-circle">
+                     <p class="nom">Will</p>
+                     <p class="role">Moniteur</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/kimi.jpg" alt="Kimi" class="rounded-circle">
+                     <p class="nom">Kimi</p>
+                     <p class="role">E-commerce</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <img src="images/isa.jpg" alt="Isa" class="rounded-circle">
+                     <p class="nom">Isa</p>
+                     <p class="role">E-commerce</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                     <img src="images/fany.jpg" alt="Fany" class="rounded-circle">
+                     <p class="nom">Fany</p>
+                     <p class="role">E-commerce</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col-lg-7">
+                  <img src="images/lagon.jpg" alt="Lagon" class="img-fluid">
+               </div>
+               <div class="col-lg-5">
+                  <p>Notre équipe est particulièrement concernée par la prévention et la préservation du littoral de l’île de La Réunion. Nous vous invitons à vous renseigner sur la page suivante :<br /><br /> www.site-web.com
+                  </p>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- COORDONNEES -->
+
+   <section>
+      <div class="container">
+         <div class="bloc" id="coordonnes">
+            <h2>Coordonnées</h2>
+            <div class="bloc-info row justify-content-md-center">
+               <div class="col-lg-7">
+                  <img src="images/carte.jpg" alt="Carte" class="img-fluid"></div>
+               <div class="col-lg-3">
+                  <p>Adresse<br /><br /> Surf Wave<br /> 19A, lot des Charmilles<br /> 97434 Saint-Gilles-les-Bains<br /><br /> Fixe : 0262 54 58 59<br /> Mobile : 0693 54 78 59</p>
+               </div>
+            </div>
+
+            <div class="row justify-content-md-center">
+               <div class="col-lg-8">
+                  <h2>Contact</h2>
+                  <form>
+                     <div class="form-row">
+                        <div class="form-group col-md-4">
+                           <input type="text" class="form-control" id="inputName" placeholder="Votre nom">
+                        </div>
+                        <div class="form-group col-md-4">
+                           <input type="email" class="form-control" id="inputEmail" placeholder="Votre email" autocomplete="username">
+                        </div>
+                        <div class="form-group col-md-4">
+                           <input type="text" class="form-control" id="inputSujet" placeholder="Sujet">
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <textarea class="form-control" rows="10" id="formMessage"></textarea>
+                     </div>
+
+                     <button type="button" class="btn-lg float-right">Envoyer</button>
+                  </form>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- FOOTER -->
+
+
+   <footer>
+      <div class="container">
+         <div id="navigation">
+            <div class="row justify-content-center">
+               <div class="col-lg-4 col-sm-6 col-11">
+                  <p>Inscrivez-vous à notre newsletter</p>
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="inputNewsletter" placeholder="Votre email">
+                  </div>
+                  <div id="social" class="d-none d-sm-block d-lg-block">
+                     <p>Restons connectés !</p>
+                     <img src="images/facebook.png" alt="Facebook">
+                     <img src="images/twitter.png" alt="Twitter">
+                     <img src="images/googleplus.png" alt="Google Plus">
+                     <img src="images/youtube.png" alt="YouTube">
+                     <img src="images/pinterest.png" alt="Pinterest">
+                     <img src="images/instagram.png" alt="Instagram">
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                  <ul>
+                     <li><a href="#">Moyens de paiement</a></li>
+                     <li><a href="#">Livraison</a></li>
+                     <li><a href="#">Mentions légales</a></li>
+                     <li><a href="#">Conditions générales de vente</a></li>
+                     <li><a href="#">Service clients</a></li>
+                     <li><a href="#">Partenaires</a></li>
+                  </ul>
+               </div>
+               <div id="footer-links" class="col-lg-4 d-none d-lg-block">
+                  <ul>
+                     <li><a href="#">Boutique</a></li>
+                     <li><a href="#">Location</a></li>
+                     <li><a href="#">Cours de surf</a></li>
+                     <li><a href="#">L'histoire</a></li>
+                     <li><a href="#">L'équipe</a></li>
+                     <li><a href="#">Contact</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="soutien">
+         <img src="images/regionreunion.jpg" alt="Région Réunion">
+         <img src="images/departement974.jpg" alt="Département de la Réunion">
+         <img src="images/irt.jpg" alt="IRT">
+      </div>
+
+   </footer>
+
+
+   <script src="./js/jquery-3.6.3.min.js"></script>
+   <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+   <script src="./js/script.js"></script>
+</body>
+
+</html>
